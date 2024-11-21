@@ -5,4 +5,4 @@ for i in range(100):
         print(resultat1, end=", ")
     else:
         resultat2 = "{}".format(i)
-        print(resultat2, end=", " if i < 99 else " ")
+        print(resultat2, end=", " if i < 99 else "")
