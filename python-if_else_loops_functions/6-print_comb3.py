@@ -5,4 +5,3 @@ for i in range(10):  # Premier chiffre de la combinaison
             print("{}".format(f"{i}{j}"))
         else:
             print("{}".format(f"{i}{j}"), end=", ")
-
