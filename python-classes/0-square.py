@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-"""
-qsfqfqslkfnqslkfnsqklnf
-"""
+"""Representation d'un carre"""
+
 class Square:
+    """vide """
     pass
