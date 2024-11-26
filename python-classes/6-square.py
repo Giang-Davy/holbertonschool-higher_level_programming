@@ -40,7 +40,7 @@ class Square:
 
     def area(self):
         """Retourne l'aire du carre"""
-        return self._size ** 2
+        return self.__size ** 2
 
     def my_print(self):
         """Affiche le carré dans la console en tenant compte de la position."""
