@@ -45,7 +45,7 @@ class Square:
         return self.__size ** 2
 
     def my_print(self):
-        """Affiche le carré avec le caractère # en tenant compte de la position."""
+        """Affiche le carré avec le caractèion."""
         if self.size == 0:
             print("")
             return
