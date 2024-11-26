@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
+
+"""Initialisation d'une classe représentant un carré."""
 class Square:
-    """Initialisation d'une classe représentant un carré."""
 
     def __init__(self, size=0, position=(0, 0)):
         """Initialise la taille et la position du carré."""
