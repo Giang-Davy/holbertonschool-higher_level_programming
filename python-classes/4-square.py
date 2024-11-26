@@ -1,25 +1,26 @@
 #!/usr/bin/python3
 """Representation d'un carre"""
 
+
 class Square:
-    """définition de la classe Square"""
+    """définition de la classe Squar"""
 
     def __init__(self, size=0):
         """initialisation de size"""
-        self.size = size  # Utilisation du setter pour initialiser size
+        self.size = size
 
     def area(self):
-        """Retourne l'aire du carré"""
+        """Retourne l'aire du carr�"""
         return self.__size ** 2
 
     @property
     def size(self):
-        """Getter pour récupérer la taille du carré"""
+        """Getter pour récupérer la taille du car"""
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Setter pour modifier la taille du carré"""
+        """Setter pour modifier la taille du carr�"""
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
