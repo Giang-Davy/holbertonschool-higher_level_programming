@@ -38,6 +38,10 @@ class Square:
             raise TypeError("position must be a tuple of 2 positive integers")
         self.__position = value
 
+    def area(self):
+        """Retourne l'aire du carre"""
+        return self._size ** 2
+
     def my_print(self):
         """Affiche le carré dans la console en tenant compte de la position."""
         if self.size == 0:
