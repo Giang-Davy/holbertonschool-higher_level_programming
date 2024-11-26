@@ -35,7 +35,9 @@ class Square:
         """Setter pour modifier la position du carré."""
         if (not isinstance(value, tuple) or len(value) != 2 or
                 not all(isinstance(i, int) and i >= 0 for i in value)):
-            raise TypeError("position must be a tuple of 2 positive integers")
+            raise TypeError(
+                "position must be a tuple of 2 positive integers"
+            )
         self.__position = value
 
     def area(self):
