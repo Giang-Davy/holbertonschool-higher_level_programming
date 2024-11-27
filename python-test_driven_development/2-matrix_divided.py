@@ -1,10 +1,11 @@
 #!/usr/bin/python3
 """Fonction de division de matrice"""
 
-
 def matrix_divided(matrix, div):
-    """Divise chaque élément d 2 décimales"""
+    """Divise chaque élément d'une matrice par un nombre, arrondi à 2 décimales"""
     if not isinstance(matrix, list) or not all(isinstance(row, list) for row in matrix):
+        raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
+    if not all(isinstance(element, (int, float)) for row in matrix for element in row):
         raise TypeError("matrix must be a matrix (list of lists) of integers/floats")
     row_length = len(matrix[0])
     for row in matrix:
@@ -15,4 +16,3 @@ def matrix_divided(matrix, div):
     if div == 0:
         raise ZeroDivisionError("division by zero")
     return [[round(element / div, 2) for element in row] for row in matrix]
-
