@@ -6,11 +6,11 @@ def matrix_divided(matrix, div):
     """Divise chaque élément à 2 décimales"""
     if not isinstance(matrix, list) or not all(
             isinstance(row, list) for row in matrix):
-        erreur1="matrix must be a matrix (list of lists) of integers/floats"
-        raise TypeError(erreur1)
+        er = "matrix must be a matrix (list of lists) of integers/floats"
+        raise TypeError(er)
     if not all(isinstance(element, (int, float)) for row in matrix
                for element in row):
-        raise TypeError(erreur1)
+        raise TypeError(er)
     row_length = len(matrix[0])
     for row in matrix:
         if len(row) != row_length:
