@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import math
 """Fonction"""
 def add_integer(a, b=98):
     """Ajoute deux entiers ou flottants. Vérifie que les arguments sont de type int ou float."""
