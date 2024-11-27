@@ -4,8 +4,7 @@
 
 def matrix_divided(matrix, div):
     """Divise chaque élément à 2 décimales"""
-    if not isinstance(matrix, list) or not all(
-            isinstance(row, list) for row in matrix):
+    if not (isinstance(matrix, list) or all(isinstance(row, list) for row in matrix)):
         er = "matrix must be a matrix (list of lists) of integers/floats"
         raise TypeError(er)
     if not all(isinstance(element, (int, float)) for row in matrix
