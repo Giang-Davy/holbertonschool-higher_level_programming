@@ -3,7 +3,7 @@
 
 
 def say_my_name(first_name, last_name=""):
-    """Divise chaque élément à 2 d�"""
+    """alo"""
     if not isinstance(first_name, str):
         raise TypeError("last_name must be a string")
     if not isinstance(last_name, str):
