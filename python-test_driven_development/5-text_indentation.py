@@ -3,14 +3,13 @@
 
 
 def text_indentation(text):
-    """def"""
+    """Fonction pour ajouter des sauts dation."""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    text = text.strip()
     result = ""
     skip_space = False
     for i in text:
-        if skip_space and i == " ":
+        if i == " " and skip_space:
             continue
         result += i
         if i in ".:?":
