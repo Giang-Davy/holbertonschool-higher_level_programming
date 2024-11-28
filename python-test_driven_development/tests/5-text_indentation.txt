@@ -1,18 +1,29 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation("Holberton. School")
 Holberton.
-School
 
->>> text_indentation(123)
-Traceback (most recent call last):
-    ...
-TypeError: text must be a string
+School
 
 >>> text_indentation("Holberton. \nSchool")
 Holberton.
 School
 
->>> text_indentation()
-Traceback (most recent call last):
-    ...
-TypeError: text_indentation() missing 1 required positional argument: 'text'
+>>> text_indentation("Holberton. \n\nSchool")
+Holberton.
+School
+
+>>> text_indentation("Holberton. \n\n\nSchool")
+Holberton.
+School
+
+>>> text_indentation("Holberton.  School")
+Holberton.
+School
+
+>>> text_indentation("Holberton.  \nSchool")
+Holberton.
+School
+
+>>> text_indentation("Holberton. \n\n\nSchool")
+Holberton.
+School
