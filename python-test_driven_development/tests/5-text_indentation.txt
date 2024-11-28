@@ -1,45 +1,29 @@
 >>> text_indentation = __import__('5-text_indentation').text_indentation
 >>> text_indentation("Holberton. School")
 Holberton.
-<BLANKLINE>
+
 School
 
 >>> text_indentation("Holberton. \nSchool")
 Holberton.
-<BLANKLINE>
-<BLANKLINE>
 School
 
 >>> text_indentation("Holberton. \n\nSchool")
 Holberton.
-<BLANKLINE>
-<BLANKLINE>
-<BLANKLINE>
 School
 
 >>> text_indentation("Holberton. \n\n\nSchool")
 Holberton.
-<BLANKLINE>
-<BLANKLINE>
-<BLANKLINE>
-<BLANKLINE>
 School
 
 >>> text_indentation("Holberton.  School")
 Holberton.
-<BLANKLINE>
 School
 
 >>> text_indentation("Holberton.  \nSchool")
 Holberton.
-<BLANKLINE>
-<BLANKLINE>
 School
 
 >>> text_indentation("Holberton. \n\n\nSchool")
 Holberton.
-<BLANKLINE>
-<BLANKLINE>
-<BLANKLINE>
-<BLANKLINE>
 School
