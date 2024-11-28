@@ -3,11 +3,10 @@
 
 
 def text_indentation(text):
-    """Fonction pour ajouter des sauts dation."""
+    """Fonction pour ajouter des stion ou des deux-points."""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
     result = ""
-    skip_space = False
     for i in text:
         if i == " " and skip_space:
             continue
