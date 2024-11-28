@@ -3,9 +3,9 @@
 
 
 def text_indentation(text):
+    """def"""
     if not isinstance(text, str):
         raise TypeError("text must be a string")
-    
     text = text.strip()
     result = ""
     skip_space = False
@@ -18,5 +18,4 @@ def text_indentation(text):
             skip_space = True
         else:
             skip_space = False
-
     print(result.strip(), end="")
