@@ -13,7 +13,7 @@ def text_indentation(text):
             continue
         result += i
         if i in ".:?":
-            result += "\n\n"
+            result += "\n"
             skip_space = True
         else:
             skip_space = False
