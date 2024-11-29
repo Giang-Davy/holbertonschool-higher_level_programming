@@ -7,7 +7,7 @@ request(url, function (error, response, body) {
     console.log(error);
   } else if (response.statusCode === 200) {
     const films = JSON.parse(body);
-    let count = 0;
+    let count = 10;
 
     films.results.forEach(film => {
       if (film.characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
