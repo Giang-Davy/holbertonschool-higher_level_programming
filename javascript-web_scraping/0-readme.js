@@ -8,8 +8,9 @@ const filePath = process.argv[2];
 // Use fs.readFile to read the file asynchronously in utf-8 encoding
 fs.readFile(filePath, 'utf-8', (err, data) => {
   if (err) {
-    console.log(err);  // If an error occurs, print the error object
+    console.log(err); // If an error occurs, print the error object
   } else {
-    console.log(data);  // Otherwise, print the file content
+    console.log(data); // Otherwise, print the file content
   }
 });
+
