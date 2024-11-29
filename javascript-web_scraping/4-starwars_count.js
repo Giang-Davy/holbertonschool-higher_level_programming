@@ -9,7 +9,10 @@ request(url, function (error, response, body) {
     const films = JSON.parse(body);
     let count = 0;
 
+    console.log('Films fetched:', films.results.length); // Affiche le nombre de films récupérés pour le débogage
+
     films.results.forEach(film => {
+      console.log('Checking film:', film.title); // Affiche chaque titre de film pour le débogage
       if (film.characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
         count++;
       }
