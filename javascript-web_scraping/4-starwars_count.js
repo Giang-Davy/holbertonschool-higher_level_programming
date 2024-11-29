@@ -11,9 +11,8 @@ request(url, function (error, response, body) {
 
     if (data.results) {
       data.results.forEach(film => {
-        if (film.characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
+        if (film.characters.includes('https://swapi-api.hbtn.io/api/people/18/'))
           count++;
-        }
       });
     }
 
