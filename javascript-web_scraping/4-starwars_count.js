@@ -1,24 +1,18 @@
 #!/usr/bin/node
-const request = require('request');
+
+const fetch = require('node-fetch');
+
 const url = process.argv[2];
 
-request(url, function (error, response, body) {
-  if (error) {
-    console.log(error);
-  } else if (response.statusCode === 200) {
-    const data = JSON.parse(body);
+fetch(url)
+  .then(response => response.json())
+  .then(data => {
     let count = 0;
-
-    if (data.results) {
-      data.results.map(film => {
-        if (film.characters.includes('https://swapi-api.hbtn.io/api/people/18/')){
-          count++;
-	}
-      });
-    }
-
+    data.results.forEach(film => {
+      if (film.characters.includes('https://swapi-api.hbtn.io/api/people/18/')) {
+        count++;
+      }
+    });
     console.log(count);
-  } else {
-    console.log('Error:', response.statusCode);
-  }
-});
+  })
+  .catch(error => console.error(error));
