@@ -1,16 +1,24 @@
 #!/usr/bin/node
 
-const fetch = require('node-fetch');
-
+const request = require('request');
 const apiUrl = process.argv[2];
+const characterId = '18';
 
-fetch(apiUrl)
-  .then(response => response.json())
-  .then(data => {
-    const characterUrl = 'https://swapi-api.hbtn.io/api/people/18/';
-    const count = data.results.filter(film => film.characters.includes(characterUrl)).length;
-    console.log(count);
-  })
-  .catch(error => {
-    console.error('Error:', error);
-  });
+request(apiUrl, (error, response, body) => {
+	if (error) {
+		console.error(error);
+		return;
+	}
+
+	const films = JSON.parse(body).results;
+	let count = 0;
+
+	films.forEach((film) => {
+		film.characters.forEach((character) => {
+			if (character.includes(`/18/`)) {
+				count++;
+			}
+		});
+	});
+	console.log(count);
+});
