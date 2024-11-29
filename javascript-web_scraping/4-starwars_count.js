@@ -10,9 +10,10 @@ request(url, function (error, response, body) {
     let count = 0;
 
     if (data.results) {
-      data.results.forEach(film => {
-        if (film.characters.includes('https://swapi-api.hbtn.io/api/people/18/'))
+      data.results.map(film => {
+        if (film.characters.includes('https://swapi-api.hbtn.io/api/people/18/')){
           count++;
+	}
       });
     }
 
